@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="board-container">
+        <div id="header">
+            <h1>2048</h1>
+            <h2 >score: <span id="score">0</span></h2>
+            <div id="buttons">
+                <button id="undoBtn" onclick="undoMove()">↩</button>
+                <button id="restartBtn" onclick="setGame()">↻</button>
+            </div>
+        </div>
+       
+        <div id="board">
+           
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Game Over!</h2>
+            <p>Your Score: <span id="modalScore">0</span></p>
+            <p>🙁
+            </p>
+        </div>
+    </div>
+   
+
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeWinModal()">&times;</span>
+            <p id="winModalMessage">Congratulations! <br>You won!<br>🥳
+            </p>
+        </div>
+    </div>
+</body>
+</html>

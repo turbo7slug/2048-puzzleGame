@@ -1,0 +1,230 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(95, 94, 98);
+}
+
+#board{
+    width: 400px;
+    height: 400px;
+    font-size:xx-large;
+    background-color:#cdc1b5;
+    border: 6px solid #bbada0;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.tile{
+    width: 90px;
+    height: 90px;
+    border: 5px solid #bbada0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.x2{
+    background-color: #eee4da;
+    color: #727371;
+}
+.x4{
+    background-color: #ece0ca;
+    color: #727371;
+}
+
+.x8{
+    background-color: #f4b17a;
+    color: white;
+}
+.x16{
+    background-color: #f59579;
+    color: white;
+}
+.x32{
+    background-color: #f57c5f;
+    color: white;
+}
+.x64{
+    background-color: #f65d3b;
+    color: white;
+}
+.x128{
+    background-color: #edce71;
+    color: white;
+}
+.x256{
+    background-color: #edcc63;
+    color: white;
+}
+
+.x512{
+    background-color: #edc651;
+    color: white;
+}
+
+.x512{
+    background-color: #edc651;
+    color: white;
+}
+
+.x1024{
+    background-color: #eec744;
+    color: white;
+}
+.x2048{
+    background-color: #ecc230;
+    color: white;
+}
+
+.x4096{
+    background-color: #fe3d3d;
+    color: white;
+}
+
+.x8192{
+    background-color: #ff2020;
+    color: white;
+}
+
+#board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    width: 400px; /* Adjust as needed */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+#buttons {
+    display: flex;
+}
+
+button {
+    width: 50px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+   
+    color: white;
+}
+
+#score {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+h2{
+    font-size: 24px;
+}
+#restartBtn{
+    background-color: red;
+}
+#undoBtn{
+    background-color: green;
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #a59b9b;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border: 1px solid #aaa;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px; /* Add rounded corners */
+}
+/* Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(143, 2, 2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add styling for win modal */
+#winModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#winModal .modal-content {
+    background-color: #ecc230;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border: 1px solid #aaa;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px; /* Add rounded corners */
+}
+
+#winModalMessage {
+    font-size: 24px;
+    color: #333;
+}
+
+#winModal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#winModal .close:hover,
+#winModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
