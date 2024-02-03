@@ -3,12 +3,14 @@ let score = 0;
 const rows = 4;
 const columns = 4;
 let previousBoard = null; 
+let previousScore=0;
 window.onload = function () {
     setGame();
 }
 
 function setGame() {
     score = 0
+    previousScore=0;
     board=[
         [0,0,0,0],
         [0,0,0,0],
@@ -169,6 +171,7 @@ function slide(row) {
         if (row[i] === row[i + 1]) {
             row[i] *= 2;
             row[i + 1] = 0;
+            previousScore=score;//store prev score for undo
             score += row[i];
         }
     }
@@ -224,6 +227,7 @@ function slideDown() {
 function undoMove() {
     if (previousBoard) {
         board = previousBoard;
+        score=previousScore;
         previousBoard = null; 
         renderBoard();
     }
